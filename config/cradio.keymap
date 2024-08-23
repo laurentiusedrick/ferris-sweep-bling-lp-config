@@ -37,7 +37,7 @@
             &kp Q      &kp V      &kp W      &kp D      &kp J          &kp B      &kp H      &to 2      &to 3     &kp ENTER 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
         //                                 │ RCTRL    │ LSHIFT   │   │ SPACEBAR │ layer 1  │ 
-                                             &kp RCTRL  &sk LSHIFT     &sk SPC    &to 1
+                                             &kp RCTRL  &sk LSHIFT     &kp SPC    &to 1
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
