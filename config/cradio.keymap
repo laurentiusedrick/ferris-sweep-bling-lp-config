@@ -33,11 +33,11 @@
         //│  I       │  S       │  R       │  T       │  G       │   │  P       │  N       │  E       │  A       │  O       │
             &kp I      &kp S      &kp R      &kp T      &kp G          &kp P      &kp N      &kp E      &kp A       &kp O 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Q       │  V       │  W       │  D       │  J       │   │  B       │  H       │ layer 2  │ layer 3  │  ENTER   │
-            &kp Q      &kp V      &kp W      &kp D      &kp J          &kp B      &kp H      &to 2      &to 3     &kp ENTER 
+        //│  Q       │  V       │  W       │  D       │  J       │   │  B       │  H       │ layer 2  │ layer 3  │  X       │
+            &kp Q      &kp V      &kp W      &kp D      &kp J          &kp B      &kp H      &to 2      &to 3       &kp X
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │ RCTRL    │ LSHIFT   │   │ SPACEBAR │ layer 1  │ 
-                                             &kp RCTRL  &sk LSHIFT     &kp SPC    &to 1
+        //                                 │ LSHIFT   │ SPACEBAR │   │ ENTER    │ layer 1  │ 
+                                            &sk LSHIFT  &kp SPC        &kp ENTER  &to 1
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -48,33 +48,33 @@
         //│ `        │  !       │  @       │  #       │  $       │   │ %        │ ^        │ &        │ *        │  BKSP    │
             &kp GRAVE  &kp EXCL   &kp AT    &kp HASH    &kp DLLR       &kp PRCNT  &kp CARET  &kp AMPS   &kp ASTRK  &kp BKSP
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ ;        │  :       │  "       │  '       │  .       │   │ <        │ {        │ }        │ >        │ !UNUSED! │
-            &kp SEMI   &kp COLON  &kp DQT    &kp SQT    &kp DOT        &kp LT     &kp LBRC   &kp RBRC   &kp GT     &kp ENTER
+        //│ ;        │  :       │  "       │  '       │  .       │   │ <        │ {        │ }        │ >        │ RCTRL    │
+            &kp SEMI   &kp COLON  &kp DQT    &kp SQT    &kp DOT        &kp LT     &kp LBRC   &kp RBRC   &kp GT     &sk RCTRL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ \        │  /       │  |       │  ?       │  ,       │   │  [       │  (       │  )       │  ]       │ ENTER    │
-            &kp BSLH   &kp FSLH   &kp PIPE   &kp QMARK  &kp COMMA       &kp LBKT   &kp LPAR   &kp RPAR   &kp RBKT   &kp ENTER
+        //│ \        │  /       │  |       │  ?       │  ,       │   │  [       │  (       │  )       │  ]       │ RALT     │
+            &kp BSLH   &kp FSLH   &kp PIPE   &kp QMARK  &kp COMMA       &kp LBKT   &kp LPAR   &kp RPAR   &kp RBKT  &sk RALT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │ layer 0  │ _        │   │  RALT    │ layer 2  │ 
-                                             &to 0      &kp UNDER      &sk RALT   &to 2
+        //                                 │ layer 0  │ _        │   │  ENTER   │ layer 2  │ 
+                                             &to 0      &kp UNDER     &kp ENTER    &to 2
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
         second_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │          │          │          │ =        │   │ 7        │ 8        │ 9        │ /        │  BKSP    │
-            &kp INS    &none      &none      &none      &kp EQUAL      &kp N7     &kp N8     &kp N9     &kp FSLH   &kp BKSP
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ TAB      │          │  UP      │          │ .        │   │ 4        │ 5        │ 6        │ *        │ -        │
-            &kp TAB    &none      &kp UARW   &none      &kp DOT        &kp N4     &kp N5     &kp N6    &kp ASTRK   &kp MINUS
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │ LEFT     │  DOWN    │  RIGHT   │ ,        │   │  1       │  2       │  3       │ +        │ ENTER    │
-           &caps_word  &kp LARW   &kp DARW   &kp RARW   &kp COMMA      &kp N1     &kp N2     &kp N3     &kp PLUS  &kp ENTER
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                 │ layer 0  │ RSHIFT   │   │  0       │ .        │ 
-                                             &to 0      &kp ESC         &kp N0    &kp DOT
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮      ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│ INSERT   │          │  UP      │          │ =        │      │ /        │ 7        │ 8        │ 9        │  BKSP    │
+            &kp INS    &none     &kp UARW    &none      &kp EQUAL        &kp FSLH    &kp N7     &kp N8     &kp N9     &kp BKSP
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ TAB      │  LEFT    │  DOWN    │   RIGHT  │ .        │      │ *        │ 4        │ 5        │ 6        │ -        │
+            &kp TAB    &kp LARW   &kp DARW   &kp RARW   &kp DOT           &kp ASTRK  &kp N4     &kp N5     &kp N6     &kp MINUS
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ CAPS     │          │          │          │ ,        │      │  0       │  1       │  2       │ 3        │ +        │
+           &caps_word  &none      &none      &none      &kp COMMA         &kp N0    &kp N1     &kp N2     &kp N3     &kp PLUS
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤      ├──────────┼──────────┼──────────┴──────────┴──────────╯
+        //                                 │ layer 0  │ RSHIFT   │      │ ENTER    │ LCTRL    │ 
+                                             &to 0     &sk RSHIFT         &kp ENTER  &sk LCTRL
+        //                                 ╰──────────┴──────────╯      ╰──────────┴──────────╯
             >;
         };
 
@@ -99,11 +99,11 @@
         fourth_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+        //│ RESET    │          │          │          │PROFILE 0 │   │ BLE OUT  │          │          │          │  RESET   │
+           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0  &out OUT_BLE  &trans     &trans     &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+        //│BOOTLOADER│          │          │          │PROFILE 1 │   │ USB OUT  │          │          │          │BOOTLOADER│
+          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1  &out OUT_USB  &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
